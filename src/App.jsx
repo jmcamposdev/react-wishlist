@@ -1,5 +1,7 @@
 import './reset.css';
 import './App.css';
+import WishList from './components/WishList';
+import WishInput from './components/WishInput';
 
 const wishes = [
   { done: false, text: 'Travel to the moon' },
@@ -22,23 +24,9 @@ function App() {
       <h1>Wish List</h1>
       <span className="date">{date}</span>
 
-      <ul className="wish-list">
-        {wishes.map(({ done, text }, i) => (
-          <li
-            key={text}
-            className={`wish-list__item ${done ? 'wish-list__item--done' : ''}`}
-          >
-            <input
-              id={`wish${i}`}
-              type="checkbox"
-              checked={done}
-            />
-            <label htmlFor={`wish${i}`}>{text}</label>
-          </li>
-        ))}
-      </ul>
+      <WishList wishes={wishes} />
 
-      <input className="wish-input__field" placeholder="Enter your wish here" />
+      <WishInput />
       <button type="button" className="wish-clear">
         Archive done
       </button>
