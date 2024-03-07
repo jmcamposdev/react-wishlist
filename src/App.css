@@ -1,0 +1,96 @@
+:root {
+  --primary: #FF6B6B;
+  --secondary: #5e5e5d;
+  --tertiary: #88D8B0;
+  --quaternary: #676767;
+  --quinary: #22223B;
+  --background-color: #D0D0D0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.date {
+  color: #626262;
+  font-size: .8rem;
+  padding-top: .7rem;
+}
+
+.wish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 2rem 0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}
+
+/* When the input is check put a white check*/
+input[type="checkbox"]:checked {
+  background-color: var(--quaternary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M9 16.2l-4.2-4.2-1.4 1.4 5.6 5.6 12-12-1.4-1.4z'/%3E%3C/svg%3E");
+  border-color: var(--quaternary);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wish-list__item  {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.wish-input__field {
+  border: none;
+  border-bottom: 1px solid var(--quaternary);
+  padding: .5rem;
+  width: 100%;
+  background-color: transparent;
+  color: var(--quaternary);
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wish-clear {
+  margin-top: 2rem;
+  background-color: var(--quaternary);
+  border: none;
+  color: white;
+  padding: .5rem;
+  cursor: pointer;
+  outline: none;
+}
