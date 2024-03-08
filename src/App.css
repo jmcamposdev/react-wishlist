@@ -40,7 +40,7 @@ h1 {
 .wish-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
   list-style: none;
   padding: 2rem 0;
 }
@@ -72,6 +72,22 @@ input[type="checkbox"]:checked {
   display: flex;
   align-items: center;
   gap: .7rem;
+  padding: .5rem;
+  transition: all .3s ease;
+}
+
+.wish-list__item--warning {
+  background-color: #f0d5a4
+}
+
+.wish-list__item--danger {
+  background-color: #F0B2A4;
+}
+
+.wish-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wish-input__field {
@@ -82,8 +98,21 @@ input[type="checkbox"]:checked {
   background-color: transparent;
   color: var(--quaternary);
   outline: none;
-  font-family: 'Montserrat', sans-serif;
 }
+
+.wish-submit__field {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.wish-submit__field svg {
+  fill: var(--quaternary);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 
 .wish-clear {
   margin-top: 2rem;
@@ -93,4 +122,7 @@ input[type="checkbox"]:checked {
   padding: .5rem;
   cursor: pointer;
   outline: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
 }
