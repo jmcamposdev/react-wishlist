@@ -76,6 +76,10 @@ input[type="checkbox"]:checked {
   transition: all .3s ease;
 }
 
+.wish-list__item--done {
+  text-decoration: line-through;
+}
+
 .wish-list__item--warning {
   background-color: #f0d5a4
 }
