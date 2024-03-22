@@ -9,6 +9,7 @@ const initialWishes = [
   { done: true, text: 'Make an intro course to React' },
   { done: true, text: 'Pay the gym' },
   { done: false, text: 'Go to the gym' },
+  { done: false, text: 'Buy a new phone' },
 ];
 
 const date = new Date().toLocaleString('en-US', {
