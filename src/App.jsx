@@ -1,16 +1,9 @@
+import { useState } from 'react';
+import initialWishes from './data/wishes';
 import './reset.css';
 import './App.css';
-import { useState } from 'react';
 import WishList from './components/WishList';
 import WishInput from './components/WishInput';
-
-const initialWishes = [
-  { done: false, text: 'Travel to the moon' },
-  { done: true, text: 'Make an intro course to React' },
-  { done: true, text: 'Pay the gym' },
-  { done: false, text: 'Go to the gym' },
-  { done: false, text: 'Buy a new phone' },
-];
 
 const date = new Date().toLocaleString('en-US', {
   year: 'numeric',
