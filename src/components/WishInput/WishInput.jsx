@@ -5,11 +5,15 @@ function WishInput({ onNewWish }) {
   const [newWishText, setNewWishText] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the form from submitting
 
+    // Trim the input text and check if it's empty
     if (newWishText.trim().length <= 0) return;
 
+    // Call the onNewWish function with the new wish object
     onNewWish({ done: false, text: newWishText });
+
+    // Reset the input text
     setNewWishText('');
   };
 
